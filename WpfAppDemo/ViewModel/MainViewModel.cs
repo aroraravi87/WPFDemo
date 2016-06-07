@@ -36,13 +36,13 @@ namespace WpfAppDemo.ViewModel
         }
         private string _emailid;
 
-        public string EmailID
+        public string Email
         {
             get { return _emailid; }
             set
             {
                 _emailid = value;
-                PropertyChanged(this, new PropertyChangedEventArgs("EmailID"));
+                PropertyChanged(this, new PropertyChangedEventArgs("Email"));
             }
         }
 
@@ -98,7 +98,9 @@ namespace WpfAppDemo.ViewModel
         static readonly string[] ValidationProperties =
         {
             "Name",
-            "Email"
+            "Email",
+            "Phone",
+            "Address"
         };
 
         string IDataErrorInfo.this[string propertyName]
@@ -127,17 +129,23 @@ namespace WpfAppDemo.ViewModel
             switch (propertyName)
             {
                 case "Name":
-                    error = ValidateNameFields(propertyName);
+                    error = ValidateNameField(propertyName);
                     break;
                 case "Email":
-                    error = ValidateEmailFields(propertyName);
+                    error = ValidateEmailField(propertyName);
+                    break;
+                case "Phone":
+                    error = ValidatePhoneField(propertyName);
+                    break;
+                case "Address":
+                    error = ValidateAddressField(propertyName);
                     break;
 
             }
             return error;
         }
 
-        private string ValidateNameFields(string propertyName)
+        private string ValidateNameField(string propertyName)
         {
             if (!string.IsNullOrWhiteSpace(propertyName))
             {
@@ -147,7 +155,7 @@ namespace WpfAppDemo.ViewModel
             return null;
         }
 
-        private string ValidateEmailFields(string propertyName)
+        private string ValidateEmailField(string propertyName)
         {
             if (!string.IsNullOrWhiteSpace(propertyName))
             {
@@ -156,41 +164,27 @@ namespace WpfAppDemo.ViewModel
 
             return null;
         }
+        private string ValidateAddressField(string propertyName)
+        {
+            if (!string.IsNullOrWhiteSpace(propertyName))
+            {
+                return "Customer Address is Required";
+            }
+
+            return null;
+        }
+        private string ValidatePhoneField(string propertyName)
+        {
+            if (!string.IsNullOrWhiteSpace(propertyName))
+            {
+                return "Customer Phone is Required";
+            }
+
+            return null;
+        }
+
+
     }
 
-    public class CommandBinder : ICommand
-    {
-        private MainViewModel _objViewModel;
-
-        public CommandBinder(MainViewModel objViewModel)
-        {
-            _objViewModel = objViewModel;
-        }
-        public bool CanExecute(object parameter)
-        {
-            return true;
-        }
-
-        public event EventHandler CanExecuteChanged;
-
-        public void Execute(object parameter)
-        {
-            if (string.IsNullOrWhiteSpace(_objViewModel.Name))
-            {
-
-            }
-            else if (string.IsNullOrWhiteSpace(_objViewModel.EmailID))
-            {
-            }
-            else if (string.IsNullOrWhiteSpace(_objViewModel.EmailID))
-            {
-            }
-            else if (string.IsNullOrWhiteSpace(_objViewModel.EmailID))
-            {
-            }
-            else if (string.IsNullOrWhiteSpace(_objViewModel.EmailID))
-            {
-            }
-        }
-    }
+    
 }

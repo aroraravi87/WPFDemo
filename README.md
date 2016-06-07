@@ -1,1 +1,5 @@
-# WPFDemo
+# WPFDemo-Windows Presentation Foundation
+
+Windows Presentation Foundation (WPF) is a UI framework that creates desktop client applications. The WPF development platform supports a broad set of application development features, including an application model, resources, controls, graphics, layout, data binding, documents, and security. It is a subset of the .NET Framework, so if you have previously built applications with the .NET Framework using ASP.NET or Windows Forms, the programming experience should be familiar. WPF uses the Extensible Application Markup Language (XAML) to provide a declarative model for application programming. 
+
+Windows Presentation Foundation (WPF) is Microsoft's development tool for Web applications and rich client applications. With WPF, developers can use XAML, the Extensible Application Markup Language, to create custom controls, graphics, 3D images and animations that are not available in traditional HTML implementations.
