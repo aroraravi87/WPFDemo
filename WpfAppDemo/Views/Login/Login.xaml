@@ -1,0 +1,90 @@
+﻿<Window x:Class="WpfAppDemo.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:child="clr-namespace:WpfAppDemo.Views.UserControls"
+        xmlns:VM="clr-namespace:WpfAppDemo.ViewModel"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+       WindowStartupLocation="CenterScreen" ResizeMode="NoResize"  Title="Main" Height="600" Width="800"
+    DataContext="{Binding Source={StaticResource Locator},Path=AccountVM}"
+        >
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition MinHeight="500" Height="*"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"></ColumnDefinition>
+            <ColumnDefinition MinWidth="500" Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="250"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3">
+            <child:Header x:Name="HeaderView"></child:Header>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="3">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="UserName :"></TextBlock>
+                <TextBox Text="{Binding UserName,Mode=TwoWay}"></TextBox>
+        </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Password :"></TextBlock>
+                <PasswordBox x:Name="txtPassword" PasswordChar="*">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="PasswordChanged">
+                            <i:InvokeCommandAction Command="{Binding OnFocusCommand}" CommandParameter="Password"></i:InvokeCommandAction>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    
+                </PasswordBox>
+               
+        </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Login" Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=txtPassword}"></Button>
+                <Button Content="Reset"></Button>
+            </StackPanel>
+
+        </StackPanel>
+
+        <!--<StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3">
+            <ItemsControl ItemsSource="{Binding Path=Person}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="{Binding PersonName}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="2" >
+            <Image Source="{StaticResource Img1}" Height="300" Width="300"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="2" >
+            <Image Source="{StaticResource Img2}" Height="400" Width="500"/>
+        </StackPanel>-->
+
+
+        <!--<StackPanel Grid.Column="2" Grid.Row="2">
+            <ListBox ItemsSource="{Binding Path=Person}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding PersonName}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>-->
+        
+        <StackPanel  Grid.Row="3" Grid.ColumnSpan="3" Margin="0 0 0 0">
+            <child:Footer x:Name="footerView"></child:Footer>
+        </StackPanel>
+    </Grid>
+</Window>

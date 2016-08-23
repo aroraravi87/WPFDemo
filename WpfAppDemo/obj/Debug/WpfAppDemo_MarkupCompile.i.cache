@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-F:\Git-Component\WPFDemo\WpfAppDemo\obj\Debug\
+E:\Git-Component\WPFDemo\WpfAppDemo\obj\Debug\
 WpfAppDemo
 none
 false
 DEBUG;TRACE
-F:\Git-Component\WPFDemo\WpfAppDemo\App.xaml
-11151548125
+E:\Git-Component\WPFDemo\WpfAppDemo\App.xaml
+71924889851
 
-12-966825346
-13726572828
-MainWindow.xaml;
+221650914094
+732045464916
+Resources\CustomResource.xaml;Resources\FormLayout.xaml;Views\Custom\MainWindow.xaml;Views\DashBoard\Dashboard.xaml;Views\Login\Login.xaml;Views\UserControls\Footer.xaml;Views\UserControls\Header.xaml;
 
 False
 
