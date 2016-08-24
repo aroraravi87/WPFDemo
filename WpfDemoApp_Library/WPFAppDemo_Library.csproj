@@ -48,8 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Helpers.cs" />
     <Compile Include="DAL\AccountDao\AccountDao.cs" />
     <Compile Include="DAL\AccountDao\Interface\IAccountDao.cs" />
+    <Compile Include="DAL\DashboardDao\DashboardDao.cs" />
+    <Compile Include="DAL\DashboardDao\Interface\IDashboardDao.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\CustomerDemographic.cs" />
@@ -64,6 +67,8 @@
     <Compile Include="Entities\User.cs" />
     <Compile Include="Manager\AccountManager\AccountManager.cs" />
     <Compile Include="Manager\AccountManager\Interface\IAccountManager.cs" />
+    <Compile Include="Manager\DashboardManager\DashboardManager.cs" />
+    <Compile Include="Manager\DashboardManager\Interface\IDashboardManager.cs" />
     <Compile Include="Model\Category.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
@@ -151,9 +156,7 @@
       <Name>WPFAppDemo_DTO</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Common\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

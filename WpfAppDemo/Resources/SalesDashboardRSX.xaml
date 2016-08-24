@@ -4,26 +4,55 @@
                     xmlns:vm="clr-namespace:WpfAppDemo.ViewModel" 
                     >
 
-    <sys:String x:Key="HeaderTitle"> Welcome Screen </sys:String>
+    <sys:String x:Key="HeaderTitle">Sales DashBoard </sys:String>
     <sys:String x:Key="FooterTitle">copyright@2015-2016</sys:String>
-    <sys:Double x:Key="ScreenWidth">800</sys:Double>
-    <sys:Double x:Key="ScreenHeight">700</sys:Double>
-    <SolidColorBrush x:Key="customsolidbrushheader">White</SolidColorBrush>
+    <sys:Double x:Key="ScreenWidthDashBoard">1024</sys:Double>
+    <sys:Double x:Key="ScreenHeightDashBoard">700</sys:Double>
+    <SolidColorBrush x:Key="DashboardheaderColor">#C6C6C6</SolidColorBrush>
+    <SolidColorBrush x:Key="DashboardfilterColor">#DFDFDF</SolidColorBrush>
+
     <SolidColorBrush x:Key="customsolidbrushfooter">White</SolidColorBrush>
-    <SolidColorBrush x:Key="appsolidbrushheader">#AAAAAA</SolidColorBrush>
+    <SolidColorBrush x:Key="appsolidbrushheader">#C6C6C6</SolidColorBrush>
     <BitmapImage x:Key="Img1" UriSource="/WpfAppDemo;component/Content/Images/ra.png"></BitmapImage>
     <BitmapImage x:Key="Img2" UriSource="/WpfAppDemo;component/Content/Images/screen.jpg"></BitmapImage>
     
     
 
 
-    <Style  TargetType="TextBlock">
-        <Setter Property="FontSize" Value="18"/>
+    <Style x:Key="DashBoardHeadline"  TargetType="TextBlock">
+        <Setter Property="FontSize" Value="25"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Foreground" Value="#003448"/>
-        <Setter Property="Margin" Value="5"/>
-        <Setter Property="Width" Value="250"/>
-        <Setter Property="Height" Value="30"/>
+        <Setter Property="Margin" Value="5,10,0,0"/>
+        <Setter Property="MinWidth" Value="250"/>
+        <Setter Property="MinHeight" Value="20"/>
+    </Style>
+
+    <Style x:Key="DashBoardSubHeadline"  TargetType="TextBlock">
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Foreground" Value="#003448"/>
+        <Setter Property="Margin" Value="5,10,0,0"/>
+        <Setter Property="MinWidth" Value="250"/>
+        <Setter Property="MinHeight" Value="20"/>
+    </Style>
+
+    <Style x:Key="DashBoardSubHeadlineCbox"  TargetType="ComboBox">
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Foreground" Value="#003448"/>
+        <Setter Property="Margin" Value="5,10,0,0"/>
+        <Setter Property="MinWidth" Value="250"/>
+        <Setter Property="MinHeight" Value="20"/>
+    </Style>
+
+    <Style x:Key="DashBoardSubHeadlineCboxItem"  TargetType="ComboBoxItem">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="Foreground" Value="#003448"/>
+        <Setter Property="MinWidth" Value="250"/>
+        <Setter Property="MinHeight" Value="20"/>
+    </Style>
+
+    <Style x:Key="MychartStyle" TargetType="Control">
+        
     </Style>
 
     <Style  TargetType="TextBox">
@@ -43,6 +72,8 @@
         <Setter Property="Width" Value="300"/>
         <Setter Property="Height" Value="30"/>
     </Style>
+    
+    
 
     <Style TargetType="Button">
         <Setter Property="FontSize" Value="18"/>

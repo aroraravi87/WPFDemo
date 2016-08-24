@@ -64,6 +64,18 @@ namespace WpfAppDemo.ViewModel
             }
         }
 
+        public DashBoardViewModel DashboardVM
+        {
+            get
+            {
+                if (!((SimpleIoc)(ServiceLocator.Current)).IsRegistered<DashBoardViewModel>())
+                {
+                    SimpleIoc.Default.Register<DashBoardViewModel>();
+                }
+                return ServiceLocator.Current.GetInstance<DashBoardViewModel>();
+            }
+        }
+
 
         public static void Cleanup()
         {

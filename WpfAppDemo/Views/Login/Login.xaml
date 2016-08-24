@@ -2,9 +2,9 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:child="clr-namespace:WpfAppDemo.Views.UserControls"
-        xmlns:VM="clr-namespace:WpfAppDemo.ViewModel"
+        xmlns:vm="clr-namespace:WpfAppDemo.ViewModel"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-       WindowStartupLocation="CenterScreen" ResizeMode="NoResize"  Title="Main" Height="600" Width="800"
+       WindowStartupLocation="CenterScreen" ResizeMode="NoResize"  Title="Main" Height="{StaticResource ScreenHeight}" Width="{StaticResource ScreenWidth}"
     DataContext="{Binding Source={StaticResource Locator},Path=AccountVM}"
         >
     
@@ -15,9 +15,9 @@
             <RowDefinition Height="100"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"></ColumnDefinition>
+            <ColumnDefinition Width="150"></ColumnDefinition>
             <ColumnDefinition MinWidth="500" Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="250"></ColumnDefinition>
+            <ColumnDefinition Width="150"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3">
@@ -26,7 +26,7 @@
 
         <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="3">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="UserName :"></TextBlock>
+                <TextBlock Text="Username :"></TextBlock>
                 <TextBox Text="{Binding UserName,Mode=TwoWay}"></TextBox>
         </StackPanel>
 

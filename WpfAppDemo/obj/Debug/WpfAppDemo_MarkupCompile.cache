@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\Git-Component\WPFDemo\WpfAppDemo\App.xaml
-71924889851
+8-1937866225
 
-18-802033698
-732045464916
-Resources\CustomResource.xaml;Resources\FormLayout.xaml;Views\Custom\MainWindow.xaml;Views\DashBoard\Dashboard.xaml;Views\Login\Login.xaml;Views\UserControls\Footer.xaml;Views\UserControls\Header.xaml;
+18-988150845
+77-296812145
+Resources\SalesDashboardRSX.xaml;Resources\CustomResource.xaml;Resources\FormLayout.xaml;Views\Custom\MainWindow.xaml;Views\DashBoard\SalesDashboard.xaml;Views\Login\Login.xaml;Views\UserControls\Footer.xaml;Views\UserControls\Header.xaml;
 
 False
 
