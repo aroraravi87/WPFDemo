@@ -8,6 +8,7 @@ using WPFAppDemo_DTO.Account;
 using WpfAppDemo_Library.DAL.AccountDao.Interface;
 using WpfAppDemo_Library.DAL.DashboardDao.Interface;
 using WpfAppDemo_Library.Manager.AccountManager.Interface;
+using WPFAppDemo_DTO.DashBoard;
 using WPFAppDemo_Library.Common;
 
 
@@ -22,9 +23,13 @@ namespace WpfAppDemo_Library.Manager.DashboardManager
             _objAccountDao = ObjDashboardDao;
         }
 
-        public ObservableCollection<SalesDTO> GetProductSales()
+        public IList<SalesDTO> GetProductSales()
         {
             return _objAccountDao.GetProductSales().ToObservableCollection();
+        }
+        public IList<ProductDTO> GetProductList()
+        {
+            return _objAccountDao.GetProductList().ToObservableCollection();
         }
     }
 }

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
-using WpfAppDemo_Library.Model;
 using WPFAppDemo_DTO.Customer;
 using WPFAppDemo_DTO.Account;
+using WPFAppDemo_Library.Model;
+
 namespace WPFDemo_AutoMapper
 {
     public class ObjectMapper : IObjectMapper

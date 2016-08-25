@@ -32,27 +32,30 @@
         <Setter Property="FontSize" Value="15"/>
         <Setter Property="Foreground" Value="#003448"/>
         <Setter Property="Margin" Value="5,10,0,0"/>
-        <Setter Property="MinWidth" Value="250"/>
+        <Setter Property="MinWidth" Value="200"/>
         <Setter Property="MinHeight" Value="20"/>
+        <Setter Property="TextAlignment" Value="Center"/>
     </Style>
 
-    <Style x:Key="DashBoardSubHeadlineCbox"  TargetType="ComboBox">
+    <!--<Style x:Key="DashBoardSubHeadlineCbox"  TargetType="ComboBox">
         <Setter Property="FontSize" Value="15"/>
         <Setter Property="Foreground" Value="#003448"/>
         <Setter Property="Margin" Value="5,10,0,0"/>
         <Setter Property="MinWidth" Value="250"/>
         <Setter Property="MinHeight" Value="20"/>
-    </Style>
+    </Style>-->
 
     <Style x:Key="DashBoardSubHeadlineCboxItem"  TargetType="ComboBoxItem">
-        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="FontSize" Value="15"/>
         <Setter Property="Foreground" Value="#003448"/>
         <Setter Property="MinWidth" Value="250"/>
         <Setter Property="MinHeight" Value="20"/>
     </Style>
 
     <Style x:Key="MychartStyle" TargetType="Control">
-        
+        <Setter Property="Margin" Value="0,5,0,0"/>
+        <Setter Property="MinWidth" Value="250"/>
+        <Setter Property="MinHeight" Value="200"/>
     </Style>
 
     <Style  TargetType="TextBox">
@@ -72,8 +75,13 @@
         <Setter Property="Width" Value="300"/>
         <Setter Property="Height" Value="30"/>
     </Style>
-    
-    
+
+    <Style x:Key="CbxControl"  TargetType="ComboBox">
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Width" Value="200"/>
+        <Setter Property="Height" Value="30"/>
+
+    </Style>
 
     <Style TargetType="Button">
         <Setter Property="FontSize" Value="18"/>

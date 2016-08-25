@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0f6cc56a9c164c889f0b1e6f5e399899" Name="Diagram1">
+      <Diagram DiagramId="6a505dd4d9544e73930feee5bd506597" Name="Diagram1">
         <EntityTypeShape EntityType="NorthwindModel.Category" Width="1.5" PointX="3" PointY="19.5" IsExpanded="true" />
         <EntityTypeShape EntityType="NorthwindModel.CustomerDemographic" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="NorthwindModel.Customer" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
@@ -16,6 +16,7 @@
         <EntityTypeShape EntityType="NorthwindModel.Shipper" Width="1.5" PointX="3" PointY="15.25" IsExpanded="true" />
         <EntityTypeShape EntityType="NorthwindModel.Supplier" Width="1.5" PointX="3" PointY="22.25" IsExpanded="true" />
         <EntityTypeShape EntityType="NorthwindModel.Territory" Width="1.5" PointX="8" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.User" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
         <AssociationConnector Association="NorthwindModel.FK_Products_Categories" ManuallyRouted="false" />
         <AssociationConnector Association="NorthwindModel.FK_Orders_Customers" ManuallyRouted="false" />
         <AssociationConnector Association="NorthwindModel.FK_Employees_Employees" ManuallyRouted="false" />
@@ -27,7 +28,6 @@
         <AssociationConnector Association="NorthwindModel.FK_Territories_Region" ManuallyRouted="false" />
         <AssociationConnector Association="NorthwindModel.CustomerCustomerDemo" ManuallyRouted="false" />
         <AssociationConnector Association="NorthwindModel.EmployeeTerritories" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="NorthwindModel.User" Width="1.5" PointX="8.375" PointY="5.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

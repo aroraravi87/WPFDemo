@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfAppDemo.Views.DashBoard
+namespace WpfAppDemo.Views
 {
     /// <summary>
-    /// Interaction logic for Dashboard.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class SalesDashboard : UserControl
+    public partial class MainWindow : Window
     {
-        public SalesDashboard()
+        public MainWindow()
         {
             InitializeComponent();
         }

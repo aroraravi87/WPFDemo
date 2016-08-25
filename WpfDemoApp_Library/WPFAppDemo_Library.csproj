@@ -7,8 +7,8 @@
     <ProjectGuid>{3B1DB369-7A41-4868-BA29-5ECFAEFB8A0E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WpfDemoApp_Library</RootNamespace>
-    <AssemblyName>WpfDemoApp_Library</AssemblyName>
+    <RootNamespace>WPFAppDemo_Library</RootNamespace>
+    <AssemblyName>WPFAppDemo_Library</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,13 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -53,99 +56,73 @@
     <Compile Include="DAL\AccountDao\Interface\IAccountDao.cs" />
     <Compile Include="DAL\DashboardDao\DashboardDao.cs" />
     <Compile Include="DAL\DashboardDao\Interface\IDashboardDao.cs" />
-    <Compile Include="Entities\Category.cs" />
-    <Compile Include="Entities\Customer.cs" />
-    <Compile Include="Entities\CustomerDemographic.cs" />
-    <Compile Include="Entities\Employee.cs" />
-    <Compile Include="Entities\Order.cs" />
-    <Compile Include="Entities\Order_Detail.cs" />
-    <Compile Include="Entities\Product.cs" />
-    <Compile Include="Entities\Region.cs" />
-    <Compile Include="Entities\Shipper.cs" />
-    <Compile Include="Entities\Supplier.cs" />
-    <Compile Include="Entities\Territory.cs" />
-    <Compile Include="Entities\User.cs" />
     <Compile Include="Manager\AccountManager\AccountManager.cs" />
     <Compile Include="Manager\AccountManager\Interface\IAccountManager.cs" />
     <Compile Include="Manager\DashboardManager\DashboardManager.cs" />
     <Compile Include="Manager\DashboardManager\Interface\IDashboardManager.cs" />
     <Compile Include="Model\Category.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>NorthwindEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Customer.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>NorthwindEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\CustomerDemographic.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>NorthwindEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Employee.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>NorthwindEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Northwind.Context.cs" />
-    <Compile Include="Model\Northwind.Context1.cs">
+    <Compile Include="Model\NorthwindEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Northwind.Context.tt</DependentUpon>
+      <DependentUpon>NorthwindEntities.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Northwind.cs" />
-    <Compile Include="Model\Northwind.Designer.cs">
-      <DependentUpon>Northwind.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Northwind1.cs">
+    <Compile Include="Model\NorthwindEntities.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>NorthwindEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Northwind1.Designer.cs">
+    <Compile Include="Model\NorthwindEntities.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Northwind.edmx</DependentUpon>
+      <DependentUpon>NorthwindEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\Order.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>NorthwindEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Order_Detail.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>NorthwindEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Product.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>NorthwindEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Region.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>NorthwindEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Shipper.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>NorthwindEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Supplier.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>NorthwindEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Territory.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>NorthwindEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\User.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>NorthwindEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\Northwind.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Northwind.Context1.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model\Northwind.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Northwind1.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="Model\Northwind.edmx">
+    <EntityDeploy Include="Model\NorthwindEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Northwind1.Designer.cs</LastGenOutput>
+      <LastGenOutput>NorthwindEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\Northwind.edmx.diagram">
-      <DependentUpon>Northwind.edmx</DependentUpon>
+    <None Include="Model\NorthwindEntities.edmx.diagram">
+      <DependentUpon>NorthwindEntities.edmx</DependentUpon>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -156,7 +133,18 @@
       <Name>WPFAppDemo_DTO</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Model\NorthwindEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NorthwindEntities.edmx</DependentUpon>
+      <LastGenOutput>NorthwindEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\NorthwindEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NorthwindEntities.edmx</DependentUpon>
+      <LastGenOutput>NorthwindEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

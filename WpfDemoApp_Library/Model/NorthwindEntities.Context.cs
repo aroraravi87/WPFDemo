@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WpfAppDemo_Library.Model
+namespace WPFAppDemo_Library.Model
 {
     using System;
     using System.Data.Entity;

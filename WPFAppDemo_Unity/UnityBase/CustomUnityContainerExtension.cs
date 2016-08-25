@@ -3,8 +3,11 @@
 using Microsoft.Practices.Unity;
 using WpfAppDemo_Library.DAL.AccountDao;
 using WpfAppDemo_Library.DAL.AccountDao.Interface;
+using WpfAppDemo_Library.DAL.DashboardDao;
+using WpfAppDemo_Library.DAL.DashboardDao.Interface;
 using WpfAppDemo_Library.Manager.AccountManager;
 using WpfAppDemo_Library.Manager.AccountManager.Interface;
+using WpfAppDemo_Library.Manager.DashboardManager;
 
 #endregion
 
@@ -49,13 +52,14 @@ namespace WPFAppDemo_Unity.UnityBase
             #region Custom DAO
 
             CustomUnityContainer.Register<IAccountDao, AccountDao>();
-           
+            CustomUnityContainer.Register<IDashboardDao, DashboardDao>();
 
             #endregion
 
             #region Custom Manager
 
             CustomUnityContainer.Register<IAccountManager, AccountManager>();
+            CustomUnityContainer.Register<IDashboardManager, DashboardManager>();
             #endregion
 
             #endregion
